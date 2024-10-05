@@ -5,18 +5,33 @@ import plotly.express as px
 import folium
 from folium.plugins import HeatMap
 from streamlit_folium import folium_static
+import os
 
+# Get the current directory of the script
+current_dir = os.path.dirname(__file__)
+
+# Construct paths for all CSV files
+path_geolocation = os.path.join(current_dir, '..', 'data', 'geolocation_dataset.csv')
+path_customers = os.path.join(current_dir, '..', 'data', 'customers_dataset.csv')
+path_order_items = os.path.join(current_dir, '..', 'data', 'order_items_dataset.csv')
+path_order_payments = os.path.join(current_dir, '..', 'data', 'order_payments_dataset.csv')
+path_orders = os.path.join(current_dir, '..', 'data', 'orders_dataset.csv')
+path_product_category_name_translation = os.path.join(current_dir, '..', 'data', 'product_category_name_translation.csv')
+path_products = os.path.join(current_dir, '..', 'data', 'products_dataset.csv')
+path_sellers = os.path.join(current_dir, '..', 'data', 'sellers_dataset.csv')
+
+# Set the page configuration
 st.set_page_config(page_title="E-commerce Dashboard", layout="wide")
 
-# df_customers = pd.read_csv("..\data\customers_dataset.csv")
-df_geolocation = pd.read_csv("..\data\geolocation_dataset.csv")
-df_order_items = pd.read_csv("..\data\order_items_dataset.csv")
-df_order_payments = pd.read_csv("..\data\order_payments_dataset.csv")
-# df_order_reviews = pd.read_csv("..\data\order_reviews_dataset.csv")
-df_orders = pd.read_csv("..\data\orders_dataset.csv")
-df_product_category_name_translation = pd.read_csv("..\data\product_category_name_translation.csv")
-df_products = pd.read_csv("..\data\products_dataset.csv")
-df_sellers = pd.read_csv("..\data\sellers_dataset.csv")
+# Read the datasets
+df_geolocation = pd.read_csv(path_geolocation)
+df_customers = pd.read_csv(path_customers)
+df_order_items = pd.read_csv(path_order_items)
+df_order_payments = pd.read_csv(path_order_payments)
+df_orders = pd.read_csv(path_orders)
+df_product_category_name_translation = pd.read_csv(path_product_category_name_translation)
+df_products = pd.read_csv(path_products)
+df_sellers = pd.read_csv(path_sellers)
 
 
 def create_delivered_orders():
