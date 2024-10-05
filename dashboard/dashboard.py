@@ -8,15 +8,15 @@ from streamlit_folium import folium_static
 
 st.set_page_config(page_title="E-commerce Dashboard", layout="wide")
 
-# df_customers = pd.read_csv(".\data\customers_dataset.csv")
-df_geolocation = pd.read_csv(".\data\geolocation_dataset.csv")
-df_order_items = pd.read_csv(".\data\order_items_dataset.csv")
-df_order_payments = pd.read_csv(".\data\order_payments_dataset.csv")
-# df_order_reviews = pd.read_csv(".\data\order_reviews_dataset.csv")
-df_orders = pd.read_csv(".\data\orders_dataset.csv")
-df_product_category_name_translation = pd.read_csv(".\data\product_category_name_translation.csv")
-df_products = pd.read_csv(".\data\products_dataset.csv")
-df_sellers = pd.read_csv(".\data\sellers_dataset.csv")
+# df_customers = pd.read_csv("..\data\customers_dataset.csv")
+df_geolocation = pd.read_csv("..\data\geolocation_dataset.csv")
+df_order_items = pd.read_csv("..\data\order_items_dataset.csv")
+df_order_payments = pd.read_csv("..\data\order_payments_dataset.csv")
+# df_order_reviews = pd.read_csv("..\data\order_reviews_dataset.csv")
+df_orders = pd.read_csv("..\data\orders_dataset.csv")
+df_product_category_name_translation = pd.read_csv("..\data\product_category_name_translation.csv")
+df_products = pd.read_csv("..\data\products_dataset.csv")
+df_sellers = pd.read_csv("..\data\sellers_dataset.csv")
 
 
 def create_delivered_orders():
